@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+.sidebar-content {
+    background-color: #faffca;
+    border-right: 2px solid #939961;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 205px;
+}
+
+.site-header, .sidebar-nav {
+    position: relative;
+}
+
+.sidebar-nav {
+    padding-left: 15px;
+}
+
+.sidebar-nav a, .back-to-top a {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.sidebar-nav a:hover, .back-to-top a:hover {
+    color: rgb(7, 218, 255);
+    font-size: 30px;
+}
+
+.site-header-logo-image img {
+    height: auto;
+    padding: 30px 0 20px;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    min-width: 980px;
+    padding: 0 0 0 206px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.main-books {
+    overflow: hidden;
+    padding: 30px 20px;
+}
+
+.main-book {
+    border: 5px dotted white;
+    font-size: 21px;
+    float: left;
+    margin: 6px;
+    width: 300px;
+}
+
+.main-book:hover {
+    border: 5px dotted chocolate;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.main-book-img img, .modal-book-img img {
+    width: 100%;
+}
+
+.main-book-txt, .modal-book-id, .login-form {
+    display: block;
+    padding: 12px 0;
+}
+
+#favDialog {
+    height: 500px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 400px;
+}
+
+.disply-none {
+    display: none;
+}
+
+.login-form {
+    border: 1px solid chocolate;
+    border-radius: 35%;
+    margin: auto;
+    padding: 10px;
+    width: 250px;
+}
