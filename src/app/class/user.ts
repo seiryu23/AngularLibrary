@@ -1,6 +1,6 @@
 export class User
 {
-    id: number;                      // ユーザid
+    id: number;                    // ユーザid
     username!: string;             // ユーザ名
     mail_address!: string;         // メールアドレス
     password!: string;             // パスワード
@@ -9,7 +9,7 @@ export class User
     areaCode!: string;             // 担当地区コード
     created!: string;              // 登録日
     modified!: string;             // 更新日
-    modifiedUserId!: number;            // 更新者ID
+    modifiedUserId!: number;       // 更新者ID
 
     constructor(value :any)
     {
