@@ -1,3 +1,15 @@
+import { DbAccessService } from '../core/services/db-access.service'
+import { Injectable } from '@angular/core';
+
+const TABLE_NAME = 'bookInf';
+
+@Injectable
+(
+  {
+  providedIn: 'root'
+  }
+)
+
 export class BookInf
 {
   bookId!: number;               // 本管理id
@@ -11,17 +23,28 @@ export class BookInf
   modified!: string;             // 更新日
   modifiedUser!: number;         // 更新者
 
-  constructor(value :any)
+  constructor
+  (
+    private bookInfDBAS: DbAccessService,
+    bookInf : BookInf
+  )
   {
-      this.bookId = value.bookId;
-      this.bookName = value.bookName;
-      this.bookType = value.bookType;
-      this.isLending = value.isLending;
-      this.periodDate = value.periodDate;
-      this.borrowerId = value.borrowerId;
-      this.landlordId = value.landlordId;
-      this.created = value.created;
-      this.modified = value.modified;
-      this.modifiedUser = value.modifiedUser;
+    this.bookId = bookInf.bookId;
+    this.bookName = bookInf.bookName;
+    this.bookType = bookInf.bookType;
+    this.isLending = bookInf.isLending;
+    this.periodDate = bookInf.periodDate;
+    this.borrowerId = bookInf.borrowerId;
+    this.landlordId = bookInf.landlordId;
+    this.created = bookInf.created;
+    this.modified = bookInf.modified;
+    this.modifiedUser = bookInf.modifiedUser;
+  }
+
+  //　貸出中の本を抽出
+  LendingTrueSelect()
+  {
+    let strWhere :string = 'isLending = true';
+    this.bookInfDBAS.SelectFunc(TABLE_NAME,strWhere);
   }
 }

@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import * as mysql from 'promise-mysql';
 
-@Injectable({
+@Injectable
+(
+  {
   providedIn: 'root'
-})
-export class DbAccessService {
+  }
+)
 
+export class DbAccessService
+{
   readonly connection = mysql.createConnection(
     {
-    host: 'db',
-    user: 'docker',
-    password: 'secret',
-    database: 'typescript',
+    host: 'localhost',
+    user: 'root',
+    password: 'Lbmz0204!',
+    database: 'us_angular',
     multipleStatements: true
     }
   );
